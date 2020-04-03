@@ -1,0 +1,11 @@
+1. Create an array called topics
+2. Create buttons out of those items in topics
+3. When clicked, buttons will use GIPHY API and pull gifs of the item
+4. Create an input section to add x into the array
+    - when user types input then submits, input will clear then a new button is added to the array
+3. When gifs appear on page
+    - initial start is in still stage
+    - once clicked, it switches to animate
+    - clicked again, still
+    - gifs must be rated g/pg 
+    
