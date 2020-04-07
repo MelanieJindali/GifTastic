@@ -55,6 +55,19 @@ function showGifs() {
             gifDiv.append(personImg);
             
             $("#gifs").append(gifDiv);
+            
+            // Apply function to gifs that are appended to div
+            $(".gif-state").on("click", function() {
+                var state = $(this).attr("data-state");
+
+                if (state === "still") {
+                    $(this).attr("src", $(this).attr("data-animate"));
+                    $(this).attr("data-state", "animate");
+                } else {
+                    $(this).attr("src", $(this).attr("data-still"));
+                    $(this).attr("data-state", "still");
+                }
+            });
 
         }
     });
