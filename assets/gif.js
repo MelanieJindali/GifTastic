@@ -16,6 +16,16 @@ function renderBtns() {
         $("#btns").append(topBtns);
     }
 }
+
+// Add person button to array
+$("#add-person").on("click", function(event) {
+    event.preventDefault();
+    var person = $("#user-input").val().trim();
+    funnyPpl.push(person);
+
+    renderBtns();
+})
+
 renderBtns();
 
 });
