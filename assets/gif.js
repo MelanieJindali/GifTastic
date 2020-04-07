@@ -32,12 +32,30 @@ function showGifs() {
             var personImg = $("<img>");
 
             // set src attribute to personImg pulled from result item
-            personImg.attr("src", result[i].images.fixed_height.url);
+            personImg.attr("src", result[i].images.fixed_height_still.url);
+            // add attributes for sill and animate gif states
+            personImg.attr("data-still", result[i].images.fixed_height_still.url);
+            personImg.attr("data-state", "still");
+            personImg.attr("data-animate", result[i].images.fixed_height.url);
+            personImg.addClass("gif-state");
+            
+            $(".gif-state").on("click", function() {
+                var state = $(this).attr("data-state");
+
+                if (state === "still") {
+                    $(this).attr("src", $(this).attr("data-animate"));
+                    $(this).attr("data-state", "animate");
+                } else {
+                    $(this).attr("src", $(this).attr("data-still"));
+                    $(this).attr("data-state", "still");
+                }
+            });
 
             gifDiv.append(p);
             gifDiv.append(personImg);
             
-            $("#gifs").prepend(gifDiv);
+            $("#gifs").append(gifDiv);
+
         }
     });
 
