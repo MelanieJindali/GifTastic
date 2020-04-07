@@ -60,8 +60,10 @@ function renderBtns() {
 // Add person button to array
 $("#add-person").on("click", function(event) {
     event.preventDefault();
-    var person = $("#user-input").val().trim();
+    var person = $("#user-input").val().trim().toLowerCase();
     funnyPpl.push(person);
+
+    $("#user-input").val("");
 
     renderBtns();
 });
