@@ -7,7 +7,7 @@ var funnyPpl = ["tom segura", "joe rogan", "mindy kaling", "hannibal buress", "t
 // Display Gifs
 function showGifs() {
     var people = $(this).attr("data-name");
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + people + "&api_key=upEXvN34I2m3g8hAYKlyFFVfyn9nG8dw&q=&limit=5&rating=G&lang=en";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + people + "&api_key=upEXvN34I2m3g8hAYKlyFFVfyn9nG8dw&limit=10&rating=G";
 
     // Ajax call
     $.ajax({
@@ -21,22 +21,25 @@ function showGifs() {
         var result = response.data;
 
         for (var i = 0; i < result.length; i++) {
+
             // div to hold gifs
             var gifDiv = $("<div>");
+
             // section to show rating
-            var p = $("<p>").text("Rating:", result[i].rating);
+            var p = $("<p>").text("Rating: " + result[i].rating);
+
             // gif holder using img tag
             var personImg = $("<img>");
+
             // set src attribute to personImg pulled from result item
             personImg.attr("src", result[i].images.fixed_height.url);
 
             gifDiv.append(p);
             gifDiv.append(personImg);
+            
+            $("#gifs").prepend(gifDiv);
         }
-
-        $("#gifs").prepend(gifDiv);
-
-    })
+    });
 
 }
 
@@ -63,7 +66,7 @@ $("#add-person").on("click", function(event) {
     renderBtns();
 });
 
-$(document).on("click", ".movie-btn", showGifs);
+$(document).on("click", ".people", showGifs);
 
 renderBtns();
 
