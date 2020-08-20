@@ -14,4 +14,4 @@ GifTastic is a web page where users could search for a gif based on the comedian
 
 * Giphy (https://developers.giphy.com/)
 
-https://melaniejindali.github.io/GifTastic/
+Checkout [GifTastic](https://melaniejindali.github.io/GifTastic/)
