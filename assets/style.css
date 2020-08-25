@@ -1,3 +1,15 @@
+.top-section {
+  font-family: 'Lato', sans-serif;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  margin: 20px 150px;
+  padding: 30px 25px 10px 25px;
+  color: white;
+  background-color: cadetblue;
+  box-shadow: 12px 12px darkslategray;
+}
+
 h5 {
     font-family: 'Lato', sans-serif;
     font-weight: bold;
@@ -5,25 +17,24 @@ h5 {
 
 button {
     font-family: 'Lato', sans-serif;
-    background-color: indigo;
+    background-color: darkslategray;
     color: ivory;
     border: 1px solid ivory;
-    padding: 10px;
-    border-radius: 30px;
+    padding: 5px 15px;
     margin: 5px 5px 5px 2px;
+    transition: 0.3s;
+}
+
+button:hover {
+  background-color: coral;
 }
 
 .input {
     margin-top: 20px;
-    max-width: 500px;
-    margin-left: 50px;
-    display: block;
-    justify-content: center;
 }
 
 
 #gifs {
-    background-color: gainsboro;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -42,6 +53,8 @@ p {
     margin-left: 30px;
 }
 
+
 body {
     margin-bottom: 50px;
+    background-image: url('./images/bg.png');
 }

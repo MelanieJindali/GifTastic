@@ -1,31 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Let's Get GifTastic!</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/style.css">
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Let's Get GifTastic!</title>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+			integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+			crossorigin="anonymous"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="assets/style.css" />
+	</head>
+	<body>
+		<div>
+			<div class="top-section">
+				<h2>
+					Click on the buttons to find GIFs or submit your own search
+					term!
+				</h2>
+				<div id="btns"></div>
 
-    <div id="btns"></div>
+				<div class="input">
+					<h5>Add your own search</h5>
+					<form>
+						<div class="form-group">
+							<input
+								type="text"
+								class="form-control"
+								id="user-input"
+							/>
+							<button id="add-btn" type="submit">Submit</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="gif-section" id="gifs"></div>
 
-<div class="input">
-    <h5>Add a funny person</h5>
-    <form>
-        <div class="form-group">
-            <input type="text" class="form-control" id="user-input">
-            <button id="add-person" type="submit">Submit</button>
-        </div>
-    </form>
-</div>
-
-    <div id="gifs"></div>
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script type="text/javascript" src="assets/gif.js"></script>
-</body>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript" src="assets/gif.js"></script>
+	</body>
 </html>
